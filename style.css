@@ -1,0 +1,295 @@
+:root {
+    --primary-dark: #0A2463; /* Azul escuro principal */
+    --primary-light: #144272; /* Azul claro secundário */
+    --accent: #205295; /* Azul para destaques */
+    --background-dark: #000000; /* Preto para fundo */
+    --card-bg: #121212; /* Preto um pouco mais claro para cards */
+    --text-primary: #FFFFFF; /* Branco para texto principal */
+    --text-secondary: #B0B0B0; /* Cinza para texto secundário */
+    --border-color: #333333; /* Cinza escuro para bordas */
+    --hover-bg: #1A1A1A; /* Cor de fundo para hover */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-dark);
+    color: var(--text-primary);
+}
+
+.navbar {
+    background-color: var(--primary-dark) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand, .nav-link {
+    color: var(--text-primary) !important;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: var(--primary-light) !important;
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    margin-bottom: 24px;
+    transition: transform 0.3s ease;
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    background-color: var(--primary-dark);
+    color: var(--text-primary);
+    border-radius: 12px 12px 0 0 !important;
+    font-weight: 600;
+    padding: 12px 20px;
+}
+
+.btn-primary {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: var(--text-primary);
+}
+
+.btn-outline-primary {
+    color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-dark);
+    color: var(--text-primary);
+}
+
+.form-control, .form-select {
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    padding: 10px 15px;
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 0.25rem rgba(32, 82, 149, 0.25);
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+}
+
+.form-control::placeholder {
+    color: var(--text-secondary);
+}
+
+.table {
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+}
+
+.table thead {
+    background-color: var(--primary-dark);
+    color: var(--text-primary);
+}
+
+.table-hover tbody tr:hover {
+    background-color: var(--hover-bg);
+}
+
+.modal-header {
+    background-color: var(--primary-dark);
+    color: var(--text-primary);
+}
+
+.modal-content {
+    border-radius: 12px;
+    border: none;
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+}
+
+.modal-body {
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+}
+
+.modal-footer {
+    background-color: var(--card-bg);
+    border-top: 1px solid var(--border-color);
+}
+
+.pagination .page-link {
+    color: var(--primary-dark);
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    color: var(--text-primary);
+}
+
+.pagination .page-link:hover {
+    background-color: var(--hover-bg);
+    border-color: var(--border-color);
+}
+
+.alert {
+    border-radius: 8px;
+    border: none;
+}
+
+.alert-success {
+    background-color: rgba(25, 135, 84, 0.15);
+    color: #0f5132;
+    border: 1px solid rgba(25, 135, 84, 0.3);
+}
+
+.alert-danger {
+    background-color: rgba(220, 53, 69, 0.15);
+    color: #842029;
+    border: 1px solid rgba(220, 53, 69, 0.3);
+}
+
+.alert-info {
+    background-color: rgba(13, 202, 240, 0.15);
+    color: #055160;
+    border: 1px solid rgba(13, 202, 240, 0.3);
+}
+
+.sidebar {
+    background-color: var(--card-bg);
+    min-height: calc(100vh - 76px);
+    padding-top: 20px;
+    border-radius: 0 0 12px 0;
+    border-right: 1px solid var(--border-color);
+}
+
+.sidebar .nav-link {
+    color: var(--text-secondary);
+    padding: 12px 20px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.sidebar .nav-link:hover, .sidebar .nav-link.active {
+    background-color: var(--primary-dark);
+    color: var(--text-primary);
+}
+
+.content-area {
+    padding: 25px;
+    background-color: var(--background-dark);
+}
+
+.product-card {
+    border-radius: 12px;
+    overflow: hidden;
+    height: 100%;
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+}
+
+.product-card .card-img-top {
+    height: 180px;
+    object-fit: cover;
+}
+
+.product-card .card-body {
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+}
+
+.stock-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.stock-input {
+    width: 80px;
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+.footer {
+    background-color: var(--primary-dark);
+    color: var(--text-primary);
+    padding: 15px 0;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.dropdown-menu {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+.dropdown-item {
+    color: var(--text-primary);
+}
+
+.dropdown-item:hover {
+    background-color: var(--hover-bg);
+    color: var(--text-primary);
+}
+
+.dropdown-divider {
+    border-top: 1px solid var(--border-color);
+}
+
+.toast {
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+.toast-header {
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.btn-close {
+    filter: invert(1);
+}
+
+.form-text {
+    color: var(--text-secondary);
+}
+
+.badge {
+    padding: 0.5em 0.75em;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        min-height: auto;
+        border-radius: 0;
+        margin-bottom: 20px;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .content-area {
+        padding: 15px;
+    }
+}
